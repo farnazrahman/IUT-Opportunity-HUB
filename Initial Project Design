@@ -414,7 +414,7 @@ This is a preliminary list of candidate classes, not a finalized class diagram. 
 
 ---
 
-## 9. DSA, OOP, and DBMS considerations
+## 9. DSA, OOP & DBMS considerations
 
 ### OOP
 Use classes and appropriate object-oriented principles to represent users, profiles, opportunities, projects, and requests. Role-specific profiles should contain information and operations relevant to each role.
