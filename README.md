@@ -197,9 +197,9 @@ The team intends to implement core data structures and algorithms itself where r
 - **Course:** Software Project Lab (SPL)
 - **Batch:** SWE 24
 - **Team members:** 
-- Farnaz Rahman Maliha - 240042117
-- Tasnova Tahia - 240042138
-- Tasnita Raida - 240042113
+ Farnaz Rahman Maliha - 240042117
+ Tasnova Tahia - 240042138
+ Tasnita Raida - 240042113
 - **Supervisor:** 
 - Md. Bakhtiar Hasan
 
