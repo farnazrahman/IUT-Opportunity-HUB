@@ -1,0 +1,449 @@
+# IUT Opportunity Hub — Initial Project Design
+
+**Purpose:** Preserve and organize the initial design discussed and approved by the project team and supervisor, based on the team's handwritten design notes.
+**Application type:** Terminal-based Java application
+**Primary users:** Students, Alumni, Faculty
+**Stage:** Initial approved design; implementation details may be refined.
+
+---
+
+## 1. Project idea and origin
+
+IUT Opportunity Hub is intended to connect members of the IUT community and make academic, research, mentorship, and professional opportunities easier to discover.
+
+The idea initially came from the team's difficulty in getting started with research. Students may want to conduct research but may not know:
+- Which faculty members or seniors are interested in a particular research topic.
+- Whom to approach for supervision or guidance.
+- How to find other students with similar research interests to form a team.
+- Which research projects are already available within the IUT community.
+- Where to discover relevant internships, jobs, assistantships, or higher-study opportunities.
+
+The proposed application provides a common place to publish opportunities, discover people and projects, and send requests to connect or collaborate.
+
+## 2. Primary user categories
+
+### 2.1 Student
+
+**Purpose:** Discover opportunities, research projects, supervisors, mentors, and potential teammates.
+
+Main activities:
+- Search for job, internship, scholarship, and research opportunities.
+- Find supervisors and teammates for research projects.
+- Explore projects created by IUT seniors, alumni, and faculty.
+- Search for people with similar skills and research interests.
+- Apply to opportunities and track application status.
+- Send connection and mentorship requests.
+- Request to join a research project.
+- View recommended opportunities and mentors.
+
+### 2.2 Alumni
+
+**Purpose:** Share professional and academic experience and guide current students.
+
+Proposed profile information:
+- Name
+- Email
+- Previous student ID
+- Department and batch
+- Degree
+- Current workplace
+- Country
+- Skills and experience
+- Research interests
+- Research/publication history
+
+Main activities:
+- View and update profile.
+- Publish job and interview notices.
+- Share higher-study opportunities.
+- Share professional and academic experience.
+- Connect with students.
+- Receive and respond to mentorship requests.
+- Share relevant research opportunities, as supported by the research module.
+
+### 2.3 Faculty
+
+**Purpose:** Publish research opportunities, identify interested students, and provide supervision or mentorship.
+
+Proposed profile information:
+- Name
+- Email
+- Faculty ID
+- Designation
+- Degree and qualifications
+- Skills and expertise
+- Research interests
+- Research/publication history
+- Supervision availability
+
+Main activities:
+- View and update profile.
+- Publish research projects.
+- Announce research-assistantship opportunities.
+- Receive connection and mentorship requests.
+- Accept or reject requests.
+- Receive and respond to research participation requests.
+- Update supervision availability.
+- Identify students whose interests and skills are relevant to a project.
+
+---
+
+## 3. Role-specific profile design
+
+### 3.1 Student profile
+
+| Attribute | Description |
+|---|---|
+| Name | Student's name |
+| Email | Email address; intended to remain private |
+| Student ID | IUT student identifier |
+| Department | Academic department |
+| Academic level | Current academic level |
+| Year and batch | Student's year and batch |
+| Completed courses | Courses completed by the student |
+| Skills | Technical or other relevant skills |
+| Research interests | Topics the student is interested in |
+| Projects and experience | Previous projects and relevant experience |
+
+**Available operations**
+1. View and update profile.
+2. Add or remove skills.
+3. Search opportunities, alumni, and faculty.
+4. Track application status.
+5. Send connection requests.
+6. Send mentorship requests.
+7. Browse research projects.
+8. Request to join a research project.
+9. View recommended opportunities and mentors.
+
+### 3.2 Alumni profile
+
+| Attribute | Description |
+|---|---|
+| Name | Alumni name |
+| Email | Email address |
+| Previous student ID | IUT student identifier from their time as a student |
+| Department and batch | IUT academic background |
+| Degree | Degree or qualification |
+| Current workplace | Current organization or workplace |
+| Country | Current country |
+| Skills and experience | Professional and technical background |
+| Research interests | Research areas of interest |
+| Research/publication history | Previous research and publications |
+
+**Available operations**
+1. View and update profile.
+2. Publish job and interview notices.
+3. Share higher-study opportunities.
+4. Share professional and academic experience.
+5. Connect with students and other members.
+6. Receive and respond to mentorship requests.
+
+### 3.3 Faculty profile
+
+| Attribute | Description |
+|---|---|
+| Name | Faculty member's name |
+| Email | Email address |
+| Faculty ID | Faculty identifier |
+| Designation | Academic designation |
+| Degree and qualifications | Academic qualifications |
+| Skills and expertise | Areas of expertise |
+| Research interests | Research topics |
+| Research/publication history | Research and publication record |
+| Supervision availability | Whether the faculty member is available to supervise |
+
+**Available operations**
+1. View and update profile.
+2. Publish research projects.
+3. Announce research-assistantship opportunities.
+4. Receive connection and mentorship requests.
+5. Accept or reject requests.
+6. Receive and respond to research participation requests.
+7. Update supervision availability.
+
+---
+
+## 4. Main application modules
+
+### Module 1 — Opportunity Management
+
+**Purpose:** Handle job, internship, scholarship, and research-assistantship opportunities.
+
+Role-based actions:
+- **Alumni:** Publish professional opportunities, such as jobs, internships, or interview notices.
+- **Faculty:** Publish research and academic opportunities, including research assistantships.
+- **Students:** View, search, filter, and apply to available opportunities.
+
+Planned functions:
+- Publish opportunity.
+- View opportunity details.
+- Search and filter opportunities.
+- Apply to an opportunity.
+- Track application status.
+- Manage applications.
+
+Planned application statuses:
+- Pending
+- Accepted
+- Rejected
+- Withdrawn
+
+### Module 2 — Alumni and Mentorship
+
+**Purpose:** Help students find alumni who can guide them and establish professional connections.
+
+Planned functions:
+- Search alumni.
+- View alumni profiles.
+- Send connection requests.
+- Send mentorship requests.
+- Respond to mentorship requests.
+- Accept or reject requests.
+- Manage connections.
+
+A connection request is intended to establish a professional network connection. A mentorship request specifically asks for guidance.
+
+### Module 3 — Research Collaboration
+
+**Purpose:** Allow faculty and alumni to publish research projects and help students discover projects and potential collaborators.
+
+Planned functions:
+- Faculty or alumni publish research projects.
+- Students browse projects.
+- Search by research domain and required skills.
+- Students request to join a project.
+- Project owners review requests.
+- Project owners accept or reject requests.
+
+This module is intended to help students discover potential supervisors and teammates with similar research interests.
+
+### Module 4 — Recommendation System
+
+**Purpose:** Recommend relevant opportunities and mentors using information in a student's profile.
+
+**A. Opportunity recommendations**
+
+Planned matching factors:
+- Skills matching the opportunity's required skills.
+- Relevant completed courses.
+- Previous projects and experience.
+- Mandatory eligibility requirements.
+
+Initial skill-match formula:
+
+`Skill Match = Number of matched required skills / Total number of required skills`
+
+The system should check mandatory eligibility separately, calculate relevance scores for eligible opportunities, rank the results, and display why an opportunity was recommended.
+
+**B. Mentor recommendations**
+
+Planned matching factors:
+- Shared skills.
+- Shared research interests.
+- Relevant academic background.
+- The student's stated goals.
+
+The system should rank relevant mentors and provide an explanation for the recommendation.
+
+---
+
+## 5. Registration and login workflow
+
+### Registration
+
+1. Start the application.
+2. Display the main menu: Register, Log in, Exit.
+3. If Register is selected, collect common information.
+4. Ask the user to select a role: Student, Alumni, or Faculty.
+5. Collect role-specific profile information.
+6. Validate the supplied information and apply the verification process.
+7. Save the user and profile information.
+8. Display registration completion.
+
+### Login
+
+1. User selects Log in.
+2. User enters login credentials.
+3. Application validates the credentials.
+4. If valid, open the appropriate role-specific dashboard.
+5. If invalid, display an error and allow another attempt.
+
+**Verification note:** The original sketch includes a validation and verification step. The exact verification method and evidence required for each role still need to be finalized. Selecting a role during registration should not, by itself, establish institutional identity.
+
+---
+
+## 6. Recommendation process flow
+
+```text
+Student requests recommendations
+              |
+              v
+Retrieve student profile
+              |
+              v
+Retrieve available opportunities
+              |
+              v
+Check mandatory eligibility
+              |
+              v
+Calculate matching scores
+              |
+              v
+Rank eligible opportunities
+              |
+              v
+Display ranked results and explanations
+```
+
+The initial design specifically identifies the skill-match calculation:
+
+```text
+Skill Match =
+    Number of matched required skills
+    ---------------------------------
+       Total number of required skills
+```
+
+Relevant completed courses and previous projects/experience are also proposed matching factors.
+
+---
+
+## 7. High-level terminal menu design
+
+These are proposed terminal menu outlines derived from the approved role-based design. They are not final screen implementations.
+
+### Main menu
+
+```text
+=================================
+       IUT OPPORTUNITY HUB
+=================================
+1. Register
+2. Log in
+0. Exit
+Enter your choice:
+```
+
+### Registration role selection
+
+```text
+Select your role:
+1. Student
+2. Alumni
+3. Faculty
+0. Back
+Enter your choice:
+```
+
+### Student dashboard
+
+```text
+============= STUDENT MENU =============
+1. View / Update Profile
+2. Manage Skills
+3. Search Opportunities
+4. Apply to an Opportunity
+5. Track Applications
+6. Search Alumni / Faculty
+7. Send Connection Request
+8. Send Mentorship Request
+9. Browse Research Projects
+10. Request to Join a Research Project
+11. View Recommended Opportunities
+12. View Recommended Mentors
+0. Log Out
+Enter your choice:
+```
+
+### Alumni dashboard
+
+```text
+============== ALUMNI MENU =============
+1. View / Update Profile
+2. Publish Professional Opportunity
+3. Share Higher-Study Opportunity
+4. View Connection Requests
+5. Manage Connections
+6. View Mentorship Requests
+7. Respond to Mentorship Requests
+8. Share Research / Academic Information
+0. Log Out
+Enter your choice:
+```
+
+### Faculty dashboard
+
+```text
+============== FACULTY MENU =============
+1. View / Update Profile
+2. Publish Research Project
+3. Announce Research Assistantship
+4. View Connection Requests
+5. View Mentorship Requests
+6. Accept / Reject Requests
+7. View Research Participation Requests
+8. Accept / Reject Project Requests
+9. Update Supervision Availability
+0. Log Out
+Enter your choice:
+```
+
+Menu options may be adjusted as implementation requirements are finalized.
+
+---
+
+## 8. Preliminary object-oriented design concepts
+
+The handwritten design identifies separate Student, Alumni, and Faculty profiles, each with role-specific attributes and operations.
+
+Candidate classes for detailed design:
+- `User` — common account information and login-related responsibilities.
+- `StudentProfile` — student-specific academic information and operations.
+- `AlumniProfile` — alumni-specific education and professional information.
+- `FacultyProfile` — faculty qualifications, expertise, and availability.
+- `Opportunity` — job, internship, scholarship, or assistantship information.
+- `ResearchProject` — project description, research domain, required skills, and owner.
+- `Application` — a student's application and its status.
+- `ConnectionRequest` — a request to establish a connection.
+- `MentorshipRequest` — a request for guidance.
+- `ProjectParticipationRequest` — a student's request to join a research project.
+
+This is a preliminary list of candidate classes, not a finalized class diagram. Class relationships, interfaces, inheritance, and composition should be decided during detailed design.
+
+---
+
+## 9. DSA, OOP, and DBMS considerations
+
+### OOP
+Use classes and appropriate object-oriented principles to represent users, profiles, opportunities, projects, and requests. Role-specific profiles should contain information and operations relevant to each role.
+
+### DSA
+Develop suitable searching, matching, sorting, and ranking logic for opportunities and mentors. Select data structures based on actual operations and explain their time and space complexity. The final algorithms and restrictions on built-in Java functions must be agreed with the supervisor.
+
+### DBMS
+Use an SQL database to store user accounts, profiles, skills, opportunities, research projects, applications, and requests. The detailed relational schema, keys, constraints, and relationships will be designed during the database-design phase.
+
+---
+
+## 10. Items to finalize during detailed design
+
+The initial design establishes the main user categories, profile information, modules, and major workflows. It does not yet specify every implementation detail. The team still needs to finalize:
+
+1. Exact registration fields and verification rules for each role.
+2. Which profile fields are private and which are visible to other users.
+3. Exact opportunity categories and required fields.
+4. Application and request state transitions.
+5. Whether alumni can publish research projects and the exact permissions for each role.
+6. The detailed class diagram and relationships.
+7. The SQL database schema.
+8. The exact recommendation scoring method and ranking algorithm.
+9. The data structures and algorithms to implement from scratch.
+10. Input validation, duplicate prevention, and error handling.
+
+These are open design decisions for the next stage, not features that should be assumed to have already been implemented.
+
+## 11. Scope note
+
+This document records the team's initial approved concept. It is not a claim that all listed features are already implemented. The team will prioritize a working, testable terminal application and refine the scope based on the project schedule and supervisor feedback.
