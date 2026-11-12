@@ -1,0 +1,21 @@
+#Meeting 01
+Date: 4th November,2026
+
+- Initial discussions on what we will do in SPL
+- Talked about selecting a preferred programming language
+Task/TODO:
+- Explore core and nice-to-have features for the project.
+- Next meeting on Monday (November 09, 2026) at 03:45 PM in shaa Allah.
+
+#Meeting 02
+Date: 9th November,2026
+
+- Went through the initial list of features and tentative tech stack.
+- Discussed regarding proposal presentation
+- Talked about version control
+TODO:
+- Prepare and share the presentation as soon as possible for feedback
+- Determine step-by-step features for the whole product
+- Find dependencies among the features
+- Next meeting on Wednesday (November 11, 2026) after the presentation in shaa Allah.
+
