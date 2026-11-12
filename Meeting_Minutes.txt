@@ -17,5 +17,4 @@ TODO:
 - Prepare and share the presentation as soon as possible for feedback
 - Determine step-by-step features for the whole product
 - Find dependencies among the features
-- Next meeting on Wednesday (November 11, 2026) after the presentation in shaa Allah.
-
+- Next meeting on Wednesday (November 11, 2026) after the presentation In shaa Allah.
