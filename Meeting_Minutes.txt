@@ -18,3 +18,16 @@ TODO:
 - Determine step-by-step features for the whole product
 - Find dependencies among the features
 - Next meeting on Wednesday (November 11, 2026) after the presentation In shaa Allah.
+
+# Meeting 03
+Date: 12th November, 2026
+
+- Discussed the project report and reviewed the overall approach.
+- Discussed the importance of clearly describing the key features of the proposed system.
+- Emphasized the inclusion of a use case diagram and detailed stakeholder roles and functionalities in the report.
+
+**Task/TODO:**
+- Refine and document the key features of the proposed system.
+- Prepare the use case diagram, identifying all relevant stakeholders and their respective functionalities.
+- Incorporate the supervisor's feedback into the project report.
+- Continue working on the report for the next review.
